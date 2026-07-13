@@ -1,3 +1,16 @@
 {
-  "apps": []
+  "apps": [
+    {
+      "id": "ctxl-tool",
+      "name": "Ctxl Tool",
+      "latest": "0.2.0",
+      "pub_date": "2026-07-13T23:40:40.608Z",
+      "updater_manifest": "/ctxl-tool/latest.json",
+      "releases": "https://github.com/ContextualIO/ctxl-tool-artifacts/releases",
+      "downloads": {
+        "macos": "https://github.com/ContextualIO/ctxl-tool-artifacts/releases/download/v0.2.0/ctxl-tool_0.2.0_universal.dmg",
+        "windows": "https://github.com/ContextualIO/ctxl-tool-artifacts/releases/download/v0.2.0/ctxl-tool_0.2.0_x64-setup.exe"
+      }
+    }
+  ]
 }

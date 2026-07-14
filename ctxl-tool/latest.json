@@ -1,19 +1,19 @@
 {
-  "version": "0.2.0",
-  "notes": "Ctxl Tool v0.2.0 — multi-tenant Flow Editor MCP proxy, product analytics, quit fix, in-app auto-update (first updater-enabled release).",
-  "pub_date": "2026-07-13T23:40:40.608Z",
+  "version": "0.2.1",
+  "notes": "**Check for updates on demand** — now from the tray menu, the macOS app menu (under About), and the in-app menu, with clear checking / up-to-date / update-available feedback. The app still checks automatically at launch and periodically; this just lets you check right now.",
+  "pub_date": "2026-07-14T23:48:27.276Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQ0RLQXZzZFFNMVdGM2Rha2JUbW5YRlptUGlaME5jUGRCUWlvY0orZzBwSWRDZjJwSURFVUtZL2h6WHc3Y2dnTkRjMTRza0lGSkNRU2xvTm13aXRmcDVWSjF5TkRZM0FFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgzOTg1MjQwCWZpbGU6Q3R4bCBUb29sLmFwcC50YXIuZ3oKRDhmZDNMZFpuRG9IYjZxRS9OZVR2NCtIaDNDaTNVbnRGdVhvM1hmN01SL0RsVkZ5Z3Y5QnNJNzRabXozU0lVd3pmb1U0ZEg4ZU1Jc3FybkZHVkZVQUE9PQo=",
-      "url": "https://github.com/ContextualIO/ctxl-tool-artifacts/releases/download/v0.2.0/ctxl-tool_0.2.0_universal.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQ0RLQXZzZFFNMVplVm9HZEtZQk8yWU9wL0RqYnl0UWdHSERPVHlodXhoWnF0RlhHM1JMcUlYWGJHekcxT0FjWkhpdnBkdUU0U1R2d2hRUE1HZS9WNTZhcFFlNUwxZUF3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg0MDcyODM1CWZpbGU6Q3R4bCBUb29sLmFwcC50YXIuZ3oKOGNGeHlmNExveEVDcm0zVXV5alNqUWhpckZWNUU1TUw4VCtqOEE3VnNFUHRmMlVIcGozTkJrWExqbmFUNjBTMDBIYU05N1QwRDdDaHJzc2d3TkZkQnc9PQo=",
+      "url": "https://github.com/ContextualIO/ctxl-tool-artifacts/releases/download/v0.2.1/ctxl-tool_0.2.1_universal.app.tar.gz"
     },
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQ0RLQXZzZFFNMVdGM2Rha2JUbW5YRlptUGlaME5jUGRCUWlvY0orZzBwSWRDZjJwSURFVUtZL2h6WHc3Y2dnTkRjMTRza0lGSkNRU2xvTm13aXRmcDVWSjF5TkRZM0FFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgzOTg1MjQwCWZpbGU6Q3R4bCBUb29sLmFwcC50YXIuZ3oKRDhmZDNMZFpuRG9IYjZxRS9OZVR2NCtIaDNDaTNVbnRGdVhvM1hmN01SL0RsVkZ5Z3Y5QnNJNzRabXozU0lVd3pmb1U0ZEg4ZU1Jc3FybkZHVkZVQUE9PQo=",
-      "url": "https://github.com/ContextualIO/ctxl-tool-artifacts/releases/download/v0.2.0/ctxl-tool_0.2.0_universal.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQ0RLQXZzZFFNMVplVm9HZEtZQk8yWU9wL0RqYnl0UWdHSERPVHlodXhoWnF0RlhHM1JMcUlYWGJHekcxT0FjWkhpdnBkdUU0U1R2d2hRUE1HZS9WNTZhcFFlNUwxZUF3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg0MDcyODM1CWZpbGU6Q3R4bCBUb29sLmFwcC50YXIuZ3oKOGNGeHlmNExveEVDcm0zVXV5alNqUWhpckZWNUU1TUw4VCtqOEE3VnNFUHRmMlVIcGozTkJrWExqbmFUNjBTMDBIYU05N1QwRDdDaHJzc2d3TkZkQnc9PQo=",
+      "url": "https://github.com/ContextualIO/ctxl-tool-artifacts/releases/download/v0.2.1/ctxl-tool_0.2.1_universal.app.tar.gz"
     },
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQ0RLQXZzZFFNMVhadXJrbGp5RUpHc0tnR3hVSWFGWXNXOVl3NDlxSnNFSlloSjNlS0I4STIrRXNocUgxT1F3dy9oZzA5ZXFJdEhVdE5lUDZNZWZGdkVTc3hiWU9yMlE0PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgzOTg1OTAyCWZpbGU6Q3R4bCBUb29sXzAuMi4wX3g2NC1zZXR1cC5leGUKNkcra2hFcVJONXRTcWxiTUwrcjdONEZ2T1FrcHllM3dmNVdKWWl5NVdpSng2SlJlMWdKa3pKRXk2bVE3bGg1WkRzSlR0R1NiWkxNdGtLcmMwL0wvQ0E9PQo=",
-      "url": "https://github.com/ContextualIO/ctxl-tool-artifacts/releases/download/v0.2.0/ctxl-tool_0.2.0_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQ0RLQXZzZFFNMVQwZE92MFRNZjBTWUJzNTRWRVZBMUgvRXhzQVRIYWtkdWVSKzRpZmZCQmpKZUdIOThNM3E5elAxaDZ2ZFFHOTRYSVVqdldwTjJOS0JFdzJ5Z2laZmc4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg0MDcyODkyCWZpbGU6Q3R4bCBUb29sXzAuMi4xX3g2NC1zZXR1cC5leGUKbXdMenREZThQZ1NjalRtd1prTFNnUklsZTVsN2NUUnp6QnVZdVhaaWJXR1pnZTZMd3YwNkVmWEZRRzZvNTU0MVVEWUZnenlCZ0dJTTJHM3REYXhhREE9PQo=",
+      "url": "https://github.com/ContextualIO/ctxl-tool-artifacts/releases/download/v0.2.1/ctxl-tool_0.2.1_x64-setup.exe"
     }
   }
 }

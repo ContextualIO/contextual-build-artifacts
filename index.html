@@ -1,0 +1,324 @@
+<!doctype html>
+<!--
+  Download page for Contextual desktop apps.
+  Destined for the ROOT of ContextualIO/contextual-build-artifacts
+  (served at https://build-artifacts.contextual.io/).
+
+  It reads /apps.json — the org-wide, human-facing index that the release
+  pipeline (scripts/make-manifest.mjs) already writes on every release. That
+  index points macOS at the DMG and Windows at the -setup.exe (NOT the updater
+  payloads), so this page needs no build step of its own: a new release updates
+  apps.json and the page reflects it on next load. Self-contained, no external
+  requests — GitHub Pages friendly.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contextual.io — Downloads</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #fbfbfd;
+        --card: #ffffff;
+        --fg: #1d1d1f;
+        --muted: #6e6e73;
+        --border: #e5e5ea;
+        --accent: #0a84ff;
+        --accent-fg: #ffffff;
+        --btn2-bg: #f2f2f7;
+        --btn2-fg: #1d1d1f;
+        --warn-bg: #fff8e6;
+        --warn-fg: #7a5b00;
+        --warn-border: #f0d999;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #000000;
+          --card: #1c1c1e;
+          --fg: #f5f5f7;
+          --muted: #98989d;
+          --border: #2c2c2e;
+          --accent: #0a84ff;
+          --accent-fg: #ffffff;
+          --btn2-bg: #2c2c2e;
+          --btn2-fg: #f5f5f7;
+          --warn-bg: #2a2411;
+          --warn-fg: #e9c76a;
+          --warn-border: #4a3f18;
+        }
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--fg);
+        font: 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+      .wrap {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 64px 20px 80px;
+      }
+      header {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+      header h1 {
+        font-size: 32px;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        margin: 0 0 8px;
+      }
+      header p {
+        color: var(--muted);
+        margin: 0;
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 24px;
+        margin-bottom: 20px;
+      }
+      .card h2 {
+        font-size: 22px;
+        margin: 0 0 4px;
+        letter-spacing: -0.01em;
+      }
+      .meta {
+        color: var(--muted);
+        font-size: 14px;
+        margin: 0 0 20px;
+      }
+      .meta a {
+        color: var(--muted);
+      }
+      .btns {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 18px;
+        border-radius: 10px;
+        font-size: 15px;
+        font-weight: 600;
+        text-decoration: none;
+        border: 1px solid transparent;
+        cursor: pointer;
+      }
+      .btn.primary {
+        background: var(--accent);
+        color: var(--accent-fg);
+      }
+      .btn.secondary {
+        background: var(--btn2-bg);
+        color: var(--btn2-fg);
+        border-color: var(--border);
+      }
+      .btn small {
+        font-weight: 400;
+        opacity: 0.8;
+      }
+      .note {
+        margin-top: 18px;
+        background: var(--warn-bg);
+        color: var(--warn-fg);
+        border: 1px solid var(--warn-border);
+        border-radius: 10px;
+        padding: 10px 14px;
+        font-size: 13px;
+      }
+      .note summary {
+        cursor: pointer;
+        font-weight: 600;
+      }
+      .note p {
+        margin: 8px 0 0;
+      }
+      .releases {
+        margin-top: 16px;
+        font-size: 14px;
+      }
+      .releases a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+      footer {
+        text-align: center;
+        color: var(--muted);
+        font-size: 13px;
+        margin-top: 40px;
+      }
+      .state {
+        text-align: center;
+        color: var(--muted);
+        padding: 40px 0;
+      }
+      .state a {
+        color: var(--accent);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <h1>Contextual.io Downloads</h1>
+        <p>Desktop apps for the Contextual.io platform.</p>
+      </header>
+      <main id="apps">
+        <div class="state" id="loading">Loading available apps…</div>
+      </main>
+      <footer>
+        Already installed? Apps update themselves — no need to return here.
+      </footer>
+    </div>
+
+    <script>
+      // Which platform is the visitor on? Used only to order/label buttons —
+      // every platform's download stays available regardless.
+      function detectOS() {
+        const p = (
+          navigator.userAgentData?.platform ||
+          navigator.platform ||
+          navigator.userAgent ||
+          ""
+        ).toLowerCase();
+        if (p.includes("mac")) return "macos";
+        if (p.includes("win")) return "windows";
+        return null;
+      }
+
+      function fmtDate(iso) {
+        try {
+          return new Date(iso).toLocaleDateString(undefined, {
+            year: "numeric",
+            month: "short",
+            day: "numeric",
+          });
+        } catch {
+          return "";
+        }
+      }
+
+      const PLATFORM_LABELS = { macos: "macOS", windows: "Windows" };
+
+      function el(tag, props = {}, ...kids) {
+        const n = document.createElement(tag);
+        Object.assign(n, props);
+        for (const k of kids) n.append(k);
+        return n;
+      }
+
+      function renderApp(app, os) {
+        const card = el("div", { className: "card" });
+        card.append(el("h2", { textContent: app.name || app.id }));
+
+        const meta = el("p", { className: "meta" });
+        meta.append(
+          `Version ${app.latest}${app.pub_date ? " · " + fmtDate(app.pub_date) : ""}`
+        );
+        card.append(meta);
+
+        const dl = app.downloads || {};
+        // Visitor's own platform first, as the primary button.
+        const order = Object.keys(dl).sort((a, b) =>
+          a === os ? -1 : b === os ? 1 : 0
+        );
+
+        const btns = el("div", { className: "btns" });
+        let hasWindows = false;
+        for (const key of order) {
+          if (key === "windows") hasWindows = true;
+          const label = PLATFORM_LABELS[key] || key;
+          const primary = key === os || (!os && key === order[0]);
+          const a = el("a", {
+            className: "btn " + (primary ? "primary" : "secondary"),
+            href: dl[key],
+          });
+          a.append(`Download for ${label}`);
+          btns.append(a);
+        }
+        card.append(btns);
+
+        // Windows installers are not yet Authenticode-signed — SmartScreen
+        // shows an "unknown publisher" prompt. Tell users how to proceed so
+        // they don't bounce. (macOS is notarized + stapled: no prompt.)
+        if (hasWindows) {
+          const note = el("details", { className: "note" });
+          note.append(
+            el("summary", {
+              textContent: "Windows: seeing a SmartScreen warning?",
+            })
+          );
+          note.append(
+            el("p", {
+              textContent:
+                'The Windows installer is not yet code-signed, so Microsoft Defender SmartScreen may warn. Click “More info”, then “Run anyway”. macOS builds are notarized by Apple and install without a prompt.',
+            })
+          );
+          card.append(note);
+        }
+
+        if (app.releases) {
+          const r = el("div", { className: "releases" });
+          const link = el("a", {
+            href: app.releases,
+            textContent: "All versions & release notes →",
+          });
+          link.target = "_blank";
+          link.rel = "noopener";
+          r.append(link);
+          card.append(r);
+        }
+        return card;
+      }
+
+      async function main() {
+        const mount = document.getElementById("apps");
+        const os = detectOS();
+        try {
+          const res = await fetch("/apps.json", { cache: "no-cache" });
+          if (!res.ok) throw new Error("HTTP " + res.status);
+          const data = await res.json();
+          const apps = (data && data.apps) || [];
+          mount.textContent = "";
+          if (apps.length === 0) {
+            mount.append(
+              el("div", {
+                className: "state",
+                textContent: "No apps are available yet.",
+              })
+            );
+            return;
+          }
+          for (const app of apps) mount.append(renderApp(app, os));
+        } catch (err) {
+          // Never show stale version data — on failure, send users to the
+          // canonical releases list, which is always current.
+          mount.textContent = "";
+          const s = el("div", { className: "state" });
+          s.append("Couldn’t load the download list. ");
+          const a = el("a", {
+            href: "https://github.com/ContextualIO/ctxl-tool-artifacts/releases",
+            textContent: "View releases on GitHub →",
+          });
+          a.target = "_blank";
+          a.rel = "noopener";
+          s.append(a);
+          mount.append(s);
+        }
+      }
+
+      main();
+    </script>
+  </body>
+</html>

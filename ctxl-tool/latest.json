@@ -1,19 +1,19 @@
 {
-  "version": "0.2.1",
-  "notes": "**Check for updates on demand** — now from the tray menu, the macOS app menu (under About), and the in-app menu, with clear checking / up-to-date / update-available feedback. The app still checks automatically at launch and periodically; this just lets you check right now.",
-  "pub_date": "2026-07-14T23:48:27.276Z",
+  "version": "0.2.2",
+  "notes": "Fixes & polish: your window size is now preserved across in-app updates (and the default window is more compact). **Windows:** fixed a proxy launch failure, and stopped/quit MCP servers no longer keep running or hold their ports.",
+  "pub_date": "2026-07-15T04:06:36.939Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQ0RLQXZzZFFNMVplVm9HZEtZQk8yWU9wL0RqYnl0UWdHSERPVHlodXhoWnF0RlhHM1JMcUlYWGJHekcxT0FjWkhpdnBkdUU0U1R2d2hRUE1HZS9WNTZhcFFlNUwxZUF3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg0MDcyODM1CWZpbGU6Q3R4bCBUb29sLmFwcC50YXIuZ3oKOGNGeHlmNExveEVDcm0zVXV5alNqUWhpckZWNUU1TUw4VCtqOEE3VnNFUHRmMlVIcGozTkJrWExqbmFUNjBTMDBIYU05N1QwRDdDaHJzc2d3TkZkQnc9PQo=",
-      "url": "https://github.com/ContextualIO/ctxl-tool-artifacts/releases/download/v0.2.1/ctxl-tool_0.2.1_universal.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQ0RLQXZzZFFNMVNTWkp3VVhtOWkxUllKY1Y4d2trc1pmVzh3WENodXZaQk16U2FVVzFQeHR6djlueTlNNTJENDFBUm5UWEJvRHpqSkVBemY1MlFmZGRGemZuYWsrQmdRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg0MDg4MjA5CWZpbGU6Q3R4bCBUb29sLmFwcC50YXIuZ3oKV0hOT1ppd2dOaUU5QloyYnIxVGkrM1lWWmpORjZpYytQaWVFSzZaa21icmhBK3ZGZzVRTXZnSldFYVBXdjVBZnIrVjF6NHRZNldqQzBzY001RmRPQ2c9PQo=",
+      "url": "https://github.com/ContextualIO/ctxl-tool-artifacts/releases/download/v0.2.2/ctxl-tool_0.2.2_universal.app.tar.gz"
     },
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQ0RLQXZzZFFNMVplVm9HZEtZQk8yWU9wL0RqYnl0UWdHSERPVHlodXhoWnF0RlhHM1JMcUlYWGJHekcxT0FjWkhpdnBkdUU0U1R2d2hRUE1HZS9WNTZhcFFlNUwxZUF3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg0MDcyODM1CWZpbGU6Q3R4bCBUb29sLmFwcC50YXIuZ3oKOGNGeHlmNExveEVDcm0zVXV5alNqUWhpckZWNUU1TUw4VCtqOEE3VnNFUHRmMlVIcGozTkJrWExqbmFUNjBTMDBIYU05N1QwRDdDaHJzc2d3TkZkQnc9PQo=",
-      "url": "https://github.com/ContextualIO/ctxl-tool-artifacts/releases/download/v0.2.1/ctxl-tool_0.2.1_universal.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQ0RLQXZzZFFNMVNTWkp3VVhtOWkxUllKY1Y4d2trc1pmVzh3WENodXZaQk16U2FVVzFQeHR6djlueTlNNTJENDFBUm5UWEJvRHpqSkVBemY1MlFmZGRGemZuYWsrQmdRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg0MDg4MjA5CWZpbGU6Q3R4bCBUb29sLmFwcC50YXIuZ3oKV0hOT1ppd2dOaUU5QloyYnIxVGkrM1lWWmpORjZpYytQaWVFSzZaa21icmhBK3ZGZzVRTXZnSldFYVBXdjVBZnIrVjF6NHRZNldqQzBzY001RmRPQ2c9PQo=",
+      "url": "https://github.com/ContextualIO/ctxl-tool-artifacts/releases/download/v0.2.2/ctxl-tool_0.2.2_universal.app.tar.gz"
     },
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQ0RLQXZzZFFNMVQwZE92MFRNZjBTWUJzNTRWRVZBMUgvRXhzQVRIYWtkdWVSKzRpZmZCQmpKZUdIOThNM3E5elAxaDZ2ZFFHOTRYSVVqdldwTjJOS0JFdzJ5Z2laZmc4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg0MDcyODkyCWZpbGU6Q3R4bCBUb29sXzAuMi4xX3g2NC1zZXR1cC5leGUKbXdMenREZThQZ1NjalRtd1prTFNnUklsZTVsN2NUUnp6QnVZdVhaaWJXR1pnZTZMd3YwNkVmWEZRRzZvNTU0MVVEWUZnenlCZ0dJTTJHM3REYXhhREE9PQo=",
-      "url": "https://github.com/ContextualIO/ctxl-tool-artifacts/releases/download/v0.2.1/ctxl-tool_0.2.1_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQ0RLQXZzZFFNMVJlblFuOWRNNEZkM2dVN0RoNGN2dzNNeENzUnBJaU5NNlFTSG9odzBIZGNyT2MzUVMrQ3JGTkx1Wks1dUhHRERYQUZtRkc2L1VDamFBM3NaQmhCTVFrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg0MDg4MzM5CWZpbGU6Q3R4bCBUb29sXzAuMi4yX3g2NC1zZXR1cC5leGUKU3ZsNGFQcGZUTFd0UlZjMG9QbW5zcG1VLzQ4bWU0ODBEK3lteC9yL0lvMTRGZjNqOUNaYkUwV1VoSkhOUThMazhLOWlVYUpNZ1d2b0pyczF6ampwRHc9PQo=",
+      "url": "https://github.com/ContextualIO/ctxl-tool-artifacts/releases/download/v0.2.2/ctxl-tool_0.2.2_x64-setup.exe"
     }
   }
 }

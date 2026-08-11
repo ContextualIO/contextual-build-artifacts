@@ -1,19 +1,19 @@
 {
-  "version": "0.2.2",
-  "notes": "Fixes & polish: your window size is now preserved across in-app updates (and the default window is more compact). **Windows:** fixed a proxy launch failure, and stopped/quit MCP servers no longer keep running or hold their ports.",
-  "pub_date": "2026-07-15T04:06:36.939Z",
+  "version": "0.3.0",
+  "notes": "Ctxl Tool 0.3.0\n\nYour window now comes back where you left it. Fixed: reappearing partially off-screen after a restart, opening on the wrong display after docking/undocking (including setups with two identical monitors), and restoring at half or double size on mixed-scaling display setups.\n\nAlso new: the settings menu (⋯) shows your install ID with one-click copy — share it with the Contextual team when asking for support. Plus additional hardening of the pipeline that signs and publishes these updates.",
+  "pub_date": "2026-08-11T16:40:58.306Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQ0RLQXZzZFFNMVNTWkp3VVhtOWkxUllKY1Y4d2trc1pmVzh3WENodXZaQk16U2FVVzFQeHR6djlueTlNNTJENDFBUm5UWEJvRHpqSkVBemY1MlFmZGRGemZuYWsrQmdRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg0MDg4MjA5CWZpbGU6Q3R4bCBUb29sLmFwcC50YXIuZ3oKV0hOT1ppd2dOaUU5QloyYnIxVGkrM1lWWmpORjZpYytQaWVFSzZaa21icmhBK3ZGZzVRTXZnSldFYVBXdjVBZnIrVjF6NHRZNldqQzBzY001RmRPQ2c9PQo=",
-      "url": "https://github.com/ContextualIO/ctxl-tool-artifacts/releases/download/v0.2.2/ctxl-tool_0.2.2_universal.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQ0RLQXZzZFFNMVoybHlmMWhkN1Zld0tMQ1k2Q3YyRUd1aDZrK0lpYVNpMWM3azhSb2JlZDZMajhZQ1FhZDA1M3pmNFA3WG9BMlFKWlY5VVR0OWZqUCs5UmJZTlNTYkE4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2NDY1Nzg0CWZpbGU6Q3R4bCBUb29sLmFwcC50YXIuZ3oKS3h2bHR6dGJsWDVVNk9JZU1RY3NFTUtZZHZGZFRoaTVuNERqVUpSNnpMckF4bnhXWjdMTEhrZGVoQjlNOHY4NG1TQSszc1NrY1FxdHJPekh4eTFtQ2c9PQo=",
+      "url": "https://github.com/ContextualIO/ctxl-tool-artifacts/releases/download/v0.3.0/ctxl-tool_0.3.0_universal.app.tar.gz"
     },
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQ0RLQXZzZFFNMVNTWkp3VVhtOWkxUllKY1Y4d2trc1pmVzh3WENodXZaQk16U2FVVzFQeHR6djlueTlNNTJENDFBUm5UWEJvRHpqSkVBemY1MlFmZGRGemZuYWsrQmdRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg0MDg4MjA5CWZpbGU6Q3R4bCBUb29sLmFwcC50YXIuZ3oKV0hOT1ppd2dOaUU5QloyYnIxVGkrM1lWWmpORjZpYytQaWVFSzZaa21icmhBK3ZGZzVRTXZnSldFYVBXdjVBZnIrVjF6NHRZNldqQzBzY001RmRPQ2c9PQo=",
-      "url": "https://github.com/ContextualIO/ctxl-tool-artifacts/releases/download/v0.2.2/ctxl-tool_0.2.2_universal.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQ0RLQXZzZFFNMVoybHlmMWhkN1Zld0tMQ1k2Q3YyRUd1aDZrK0lpYVNpMWM3azhSb2JlZDZMajhZQ1FhZDA1M3pmNFA3WG9BMlFKWlY5VVR0OWZqUCs5UmJZTlNTYkE4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2NDY1Nzg0CWZpbGU6Q3R4bCBUb29sLmFwcC50YXIuZ3oKS3h2bHR6dGJsWDVVNk9JZU1RY3NFTUtZZHZGZFRoaTVuNERqVUpSNnpMckF4bnhXWjdMTEhrZGVoQjlNOHY4NG1TQSszc1NrY1FxdHJPekh4eTFtQ2c9PQo=",
+      "url": "https://github.com/ContextualIO/ctxl-tool-artifacts/releases/download/v0.3.0/ctxl-tool_0.3.0_universal.app.tar.gz"
     },
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQ0RLQXZzZFFNMVJlblFuOWRNNEZkM2dVN0RoNGN2dzNNeENzUnBJaU5NNlFTSG9odzBIZGNyT2MzUVMrQ3JGTkx1Wks1dUhHRERYQUZtRkc2L1VDamFBM3NaQmhCTVFrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg0MDg4MzM5CWZpbGU6Q3R4bCBUb29sXzAuMi4yX3g2NC1zZXR1cC5leGUKU3ZsNGFQcGZUTFd0UlZjMG9QbW5zcG1VLzQ4bWU0ODBEK3lteC9yL0lvMTRGZjNqOUNaYkUwV1VoSkhOUThMazhLOWlVYUpNZ1d2b0pyczF6ampwRHc9PQo=",
-      "url": "https://github.com/ContextualIO/ctxl-tool-artifacts/releases/download/v0.2.2/ctxl-tool_0.2.2_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQ0RLQXZzZFFNMWE5Ym1oby9sTStZWHpBS0hNUFhWNitWY3l5K0hPVXZLWkIrR0V6b0VnKzNWcVkwdDl6NWExamx2M1A4bjFvL2dLUEZOelg0Wk9pa0hHSXFhbWVRMkE4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2NDY2MzIyCWZpbGU6Q3R4bCBUb29sXzAuMy4wX3g2NC1zZXR1cC5leGUKUGd1ZkxxZGp5SFI4KzBIUE1SaGtvQjA2Z2ZHcm4yc2ZvQjlzL3F5dFQ4NlRVTzlPakdNWTF2TVA0YXhlelFKMmVicmc1WXVwUEQzcVMxMnlpMjRzQ0E9PQo=",
+      "url": "https://github.com/ContextualIO/ctxl-tool-artifacts/releases/download/v0.3.0/ctxl-tool_0.3.0_x64-setup.exe"
     }
   }
 }
